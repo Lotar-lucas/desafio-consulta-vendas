@@ -40,8 +40,7 @@ public class SaleController {
     @RequestParam(name = "minDate", required = false, defaultValue = "") String minDate,
     @RequestParam(name = "maxDate", required = false, defaultValue = "") String maxDate
     ) {
-		// TODO
       List<SalesSummaryDTO> salesSummarys =  service.findSalesSummary(maxDate, minDate);
-		return ResponseEntity.ok(salesSummarys);
+		  return ResponseEntity.ok(salesSummarys);
 	}
 }
