@@ -4,24 +4,26 @@ import com.devsuperior.dsmeta.projections.SalesBySellerProjection;
 
 import java.time.LocalDate;
 
-public class SaleSellerDTO {
+public class SalesSellerDTO {
   private Long id;
   private Double amount;
   private LocalDate date;
-  private String name;
+  private String sellerName;
 
-  public SaleSellerDTO(Long id, Double amount, LocalDate date, String name) {
+  public SalesSellerDTO() {};
+
+  public SalesSellerDTO(Long id, Double amount, LocalDate date, String name) {
     this.id = id;
     this.amount = amount;
     this.date = date;
-    this.name = name;
+    this.sellerName = name;
   }
 
-  public SaleSellerDTO(SalesBySellerProjection projection) {
+  public SalesSellerDTO(SalesBySellerProjection projection) {
     id = projection.getId();
     amount = projection.getAmount();
     date = projection.getDate();
-    name = projection.getName();
+    sellerName = projection.getSellerName();
   }
 
   public Long getId() {
@@ -36,8 +38,8 @@ public class SaleSellerDTO {
     return date;
   }
 
-  public String getName() {
-    return name;
+  public String getsellerName() {
+    return sellerName;
   }
 
   @Override
@@ -46,7 +48,7 @@ public class SaleSellerDTO {
       "id=" + id +
       ", amount=" + amount +
       ", date=" + date +
-      ", name='" + name + '\'' +
+      ", name='" + sellerName + '\'' +
       '}';
   }
 }
