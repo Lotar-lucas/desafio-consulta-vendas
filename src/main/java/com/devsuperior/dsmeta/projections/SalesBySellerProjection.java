@@ -6,5 +6,5 @@ public interface SalesBySellerProjection {
    Long getId();
    LocalDate getDate();
    Double getAmount();
-   String getName();
+   String getSellerName();
 }
