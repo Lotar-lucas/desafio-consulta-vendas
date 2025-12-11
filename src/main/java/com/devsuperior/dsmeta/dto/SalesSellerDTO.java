@@ -26,13 +26,6 @@ public class SalesSellerDTO {
     sellerName = projection.getSellerName();
   }
 
-//  public SalesSellerDTO(SalesSellerDTO salesSellerDTO) {
-//    this.id = salesSellerDTO.getId();
-//    this.amount = salesSellerDTO.getAmount();
-//    this.date = salesSellerDTO.getDate();
-//    this.sellerName = salesSellerDTO.getsellerName();
-//  }
-
   public Long getId() {
     return id;
   }
